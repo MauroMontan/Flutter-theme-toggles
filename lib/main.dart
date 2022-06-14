@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import "package:local_storage/shared_preferences/shared_preferences.dart"
     show SPreferences;
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SPreferences.init();
@@ -48,6 +49,7 @@ class App extends StatelessWidget {
           title: const Text("preferences"),
           actions: <Widget>[
             CupertinoSwitch(
+                
                 value: themeMode.getCurrentTheme,
                 onChanged: (value) {
                   themeMode.setCurrentTheme = value;
